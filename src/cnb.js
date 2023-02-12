@@ -2,10 +2,6 @@ import {Outlet} from "react-router";
 import {Link} from "react-router-dom";
 import {useState, useEffect, useRef} from "react";
 
-function Reroute({rerouteDest, label, off}) { // TODO: make it so that I don't have to pass turnOff like this
-    return <Link to={rerouteDest} onClick={off}>{label}</Link>; // Creates a special link object that can be turned off when clicked to close the dropdown.
-}
-
 export default function CustomNavBar() {
     const [state, setState] = useState(false); // useState hook to keep track of whether the dropdown is being displayed
     function turnOff() {
@@ -26,6 +22,9 @@ export default function CustomNavBar() {
         return () => {document.removeEventListener("mousedown", handleClick)};
     });
 
+    function Reroute({rerouteDest, label}) {
+        return <Link to={rerouteDest} onClick={turnOff}>{label}</Link>; // Creates a special link object that can be turned off when clicked to close the dropdown.
+    }
 
     return (
       <>
@@ -34,14 +33,25 @@ export default function CustomNavBar() {
                 <div className={"HomeNavButton"}>
                     <Link to={"/"}>Home</Link>
                 </div>
+
+                <div className={"AboutNavButton"}>
+                    <Link to={"/about"}>About</Link>
+                </div>
+
+                <div className={"DocsNavButton"}>
+                    <Link to={"/docs"}>Docs</Link>
+                </div>
+
                 <div className={"ProjectDropDown"} ref={menuArea}> {/*ref allows this div to be the "target"*/}
                     <div className="dropTrigger" onClick={() => setState(!state)}> {/*this is the div that contains the actual drop menu button. onClick will flip the current vis state.*/}
-                        <button>I am likely to kill myself very soon</button>
+                        <button>caffine fever dream</button>
                     </div>
                     <div className={`drop${state ? "Active" : "Inactive"}`}> {/*the classname here flips when required by button presses. Contains the dropdown menu.*/}
-                        <Reroute rerouteDest={"working"} label={"Functional"} off={turnOff}/>
+                        <Reroute rerouteDest={"projectsFunctional"} label={"Complete"}/>
+                        <Reroute rerouteDest={"projectsInProgress"} label={"In Progress"}/>
                     </div>
                 </div>
+
             </div>
         <Outlet/> {/*Ensure that the navbar is always rendered even as we switch pages*/}
         </div>

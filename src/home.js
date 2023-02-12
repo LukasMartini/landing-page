@@ -1,14 +1,9 @@
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 
 export default function Home() {
     return (
         <>
-            <li><Link to="/working">hi</Link></li>
-            <button onClick={help()}>shit</button>
+            <h2>home</h2>
         </>
     );
-
-    function help() {
-        return <Link to="/working"></Link>
-    }
 }
