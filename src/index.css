@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.CustomNavBar {
+  display: flex;
+}
+
+.dropActive {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropInactive {
+  visibility: hidden;
+  opacity: 0;
+}

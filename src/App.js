@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+//import { useState } from 'react';
+//import Dropdown from 'react-bootstrap/Dropdown';
+//import {DropdownButton} from "react-bootstrap";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CustomNavBar from "./cnb";
+import Home from "./home.js";
+import Projects from "./projects.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function lp() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<CustomNavBar/>}>
+                    <Route index element={<Home/>}/>
+                    <Route path="working" element={<Projects/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<lp />);
