@@ -3,7 +3,11 @@
 export default function Home() {
     return (
         <>
-            <h2>home</h2>
+            <div className="homeBody">
+                <div className={"homeHeader"}>
+                    <h1>Home Header</h1>
+                </div>
+            </div>
         </>
     );
 }

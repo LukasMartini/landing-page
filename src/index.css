@@ -12,8 +12,21 @@ code {
     monospace;
 }
 
+/* ---------------------------- HOME PAGE ---------------------------- */
+.homeBody {
+  background-image: url("./resources/cnbBack.gif"); /*Loads background graphic.*/
+  height: 1000px;
+}
+
+.homeHeader {
+  color: white;
+}
+
+/* ----------------------------- NAV BAR ----------------------------- */
 .CustomNavBar {
   display: flex;
+  flex-direction: row; /*specified here for safety, though default is row.*/
+  height: 75px;
 }
 
 .dropActive {

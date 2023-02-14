@@ -2,7 +2,10 @@ import {Outlet} from "react-router";
 import {Link} from "react-router-dom";
 import {useState, useEffect, useRef} from "react";
 
+//import cnbBack from "./resources/cnbBack.gif";
+
 export default function CustomNavBar() {
+    // --------------------------------- Hooks --------------------------------- //
     const [state, setState] = useState(false); // useState hook to keep track of whether the dropdown is being displayed
     function turnOff() {
         setState(false);
@@ -22,14 +25,16 @@ export default function CustomNavBar() {
         return () => {document.removeEventListener("mousedown", handleClick)};
     });
 
+    // -------------------------- Additional Components -------------------------- //
     function Reroute({rerouteDest, label}) {
         return <Link to={rerouteDest} onClick={turnOff}>{label}</Link>; // Creates a special link object that can be turned off when clicked to close the dropdown.
     }
 
+    // ------------------------------- Website JSX ------------------------------- //
     return (
       <>
-        <div className="main">
             <div className="CustomNavBar">
+                {/*<img src={cnbBack} alt={"Twinkling Stars. Source: https://tenor.com/view/twinkle-little-star-night-sky-gif-13048017"}></img>*/}
                 <div className={"HomeNavButton"}>
                     <Link to={"/"}>Home</Link>
                 </div>
@@ -54,7 +59,6 @@ export default function CustomNavBar() {
 
             </div>
         <Outlet/> {/*Ensure that the navbar is always rendered even as we switch pages*/}
-        </div>
       </>
     );
 }
