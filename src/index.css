@@ -14,19 +14,20 @@ code {
 
 /* ---------------------------- HOME PAGE ---------------------------- */
 .homeBody {
-  background-image: url("./resources/cnbBack.gif"); /*Loads background graphic.*/
+  /*background-image: url("./resources/cnbBack.gif"); Loads background graphic.*/
   height: 1000px;
 }
 
 .homeHeader {
-  color: white;
+  /*color: white;*/
+  color: black; /*TODO: this applies only when the background is pure white. Change this back once you're on the formatting step*/
 }
 
 /* ----------------------------- NAV BAR ----------------------------- */
 .CustomNavBar {
   display: flex;
   flex-direction: row; /*specified here for safety, though default is row.*/
-  height: 75px;
+  height: 50px;
 }
 
 .dropActive {
