@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "mocha": "^10.2.0",
     "p4-css": "^1.5.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.1",
@@ -15,11 +16,17 @@
     "react-player": "^2.12.0",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "4.0.3",
     "react-simple-player": "^1.1.0",
     "react-youtube": "^10.1.0",
     "scriptjs": "^2.5.9",
+    "selenium-webdriver": "^4.11.1",
     "web-vitals": "^2.1.4"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   },
   "scripts": {
     "start": "react-scripts start",
