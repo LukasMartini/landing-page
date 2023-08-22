@@ -1,6 +1,3 @@
-//import { useState } from 'react';
-//import Dropdown from 'react-bootstrap/Dropdown';
-//import {DropdownButton} from "react-bootstrap";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomNavBar from "./cnb";
@@ -10,7 +7,7 @@ import ProjectsFunctional from "./projectsfunctional.js";
 import ProjectsIP from "./projectsIP.js";
 import UhOh from "./fourohfour.js";
 
-export default function lp() {
+export default function Lp() {
     return (
         <BrowserRouter>
             <Routes>
@@ -27,4 +24,4 @@ export default function lp() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<lp/>);
+root.render(<Lp/>);
