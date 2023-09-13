@@ -33,7 +33,7 @@ export default function CustomNavBar() {
     // ------------------------------- Website JSX ------------------------------- //
     return (
       <>
-            <div className="CustomNavBar">
+            <div className={"CustomNavBar"}>
                 {/*<img src={cnbBack} alt={"Twinkling Stars. Source: https://tenor.com/view/twinkle-little-star-night-sky-gif-13048017"}></img>*/}
                 <div className={"HomeNavButton"}>
                     <Link to={"/"}>Home</Link>

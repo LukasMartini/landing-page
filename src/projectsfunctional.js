@@ -1,9 +1,16 @@
 import HTMLReactParser from "html-react-parser";
+import Demo from './demo';
 export default function ProjectsFunctional() {
     return (
         <>
-            <h3>projectsFunctional</h3>
-            {getREADME("https://github.com/LukasMartini/SudokuAppandAutoSolver")}
+            <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+            <div id={"readmeArea"}>
+                <h3>projectsFunctional</h3>
+                {getREADME("https://github.com/LukasMartini/SudokuAppandAutoSolver")}
+            </div>
+            <div id={"demoArea"}>
+                <Demo/>
+            </div>
         </>
     );
 }
