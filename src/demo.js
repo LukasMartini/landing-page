@@ -1,4 +1,5 @@
 import React from 'react';
+import { testDemo } from './testPythonScriptHost';
 
 class Demo extends React.Component {
     // A NOTE ABOUT THE ORIGINAL ISSUE:
@@ -13,9 +14,8 @@ class Demo extends React.Component {
         console.log("I'm dying");
     }
     render () {
-        return <>
-            <text>AAAAAA</text>
-        </>
+        let fileText = testDemo(); // TODO: figure out evalPython issue and make this function an argument of the class for flexibility.
+        return <div dangerouslySetInnerHTML={{__html: fileText}}/>; // Converts the response text into an object with a parameter __html (i.e. an html string)
     }
 }
 export default Demo;
